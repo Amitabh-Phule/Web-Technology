@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation using DOM</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form onsubmit="return submitButtonClick()">
+        Name 
+        <input type="text" id="name"/>
+        <br><span id="nameError"></span><br><br>
+
+        Email 
+        <input type="text" id="email"/>
+        <br><span id="emailError"></span><br><br>
+
+        Password 
+        <input type="password" id="password"/>
+        <br><span id="passwordError"></span><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="Exp04.js"></script>
+
+</body>
+</html>
