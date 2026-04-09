@@ -2,19 +2,34 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+function checkRoute(request, response, next) {
+  console.log("Visited URL:", request.url)
+  next()
+}
+
+app.use(checkRoute)
+
+app.use((req, res, next) => {
+  console.log("Middleware Executed at:", new Date())
+  next()
+})
+
+// Routes
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
 app.get('/about', (req, res) => {
   res.send('Welcome to about page')
 })
-app.get('/projects', (req, res) => {
-  res.send('Welcome to project page')
-})
-app.get('/contact', (req, res) => {
-  res.send('Welcome to contact page')
-})
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Server running on port ${port}`)
 })
+
+//Res : This object send data back to client
+//Common res method
+//1.res.send() = send text
+//2.res.json() = send json
+//3.res.status() = send http status
+//4.res.sendfile() = 
