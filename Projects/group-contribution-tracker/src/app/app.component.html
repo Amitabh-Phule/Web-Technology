@@ -1,0 +1,27 @@
+<div class="container py-4">
+  <header class="pb-3 mb-4 border-bottom text-center">
+    <h2 class="h3">Group Project Contribution Tracker</h2>
+  </header>
+  
+  <div *ngIf="!selectedProjectId">
+    <div *ngIf="projectService.getProjects().length === 0" class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <app-create-project></app-create-project>
+      </div>
+    </div>
+
+    <div *ngIf="projectService.getProjects().length > 0" class="row">
+      <div class="col-md-8">
+        <app-project-list (projectSelected)="onProjectSelected($event)"></app-project-list>
+      </div>
+      <div class="col-md-4">
+        <app-create-project></app-create-project>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedProjectId">
+    <button class="btn btn-outline-secondary mb-3" (click)="selectedProjectId = null">← Back to Projects</button>
+    <app-project-detail [projectId]="selectedProjectId"></app-project-detail>
+  </div>
+</div>

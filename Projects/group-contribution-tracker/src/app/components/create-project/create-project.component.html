@@ -1,0 +1,16 @@
+<div class="card shadow-sm mb-4">
+  <div class="card-header bg-success text-white">
+    <h5 class="mb-0">New Project</h5>
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label class="form-label">Project Name</label>
+      <input type="text" class="form-control" [(ngModel)]="projectName" placeholder="e.g. AI System">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Members (comma separated)</label>
+      <input type="text" class="form-control" [(ngModel)]="membersInput" placeholder="e.g. Amit, Rahul, Riya">
+    </div>
+    <button class="btn btn-success w-100" (click)="createProject()" [disabled]="!projectName || !membersInput">Create Project</button>
+  </div>
+</div>

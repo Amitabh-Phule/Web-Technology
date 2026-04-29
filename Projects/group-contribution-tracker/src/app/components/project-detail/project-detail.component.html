@@ -1,0 +1,16 @@
+<div *ngIf="project">
+  <div class="card mb-4 shadow-sm border-0 bg-light">
+    <div class="card-body">
+      <h3 class="mb-0">Project: {{project.name}}</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7 mb-4">
+      <app-task-board [projectId]="projectId"></app-task-board>
+    </div>
+    <div class="col-md-5 mb-4">
+      <app-member-stats [projectId]="projectId"></app-member-stats>
+    </div>
+  </div>
+</div>

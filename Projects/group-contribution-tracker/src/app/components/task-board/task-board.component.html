@@ -1,0 +1,45 @@
+<div class="card shadow-sm mb-4">
+  <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+    <h5 class="mb-0">Tasks</h5>
+  </div>
+  <div class="card-body">
+    <div class="mb-4">
+      <div class="row g-2">
+        <div class="col-md-5">
+          <input type="text" class="form-control" [(ngModel)]="newTaskTitle" placeholder="Task Title">
+        </div>
+        <div class="col-md-4">
+          <select class="form-select" [(ngModel)]="assignedMemberId">
+            <option value="" disabled>Assign to...</option>
+            <option *ngFor="let m of members" [value]="m.id">{{m.name}}</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-dark w-100" (click)="createTask()" [disabled]="!newTaskTitle || assignedMemberId === ''">Add Task</button>
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-group">
+      <li *ngFor="let t of tasks" class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <span [class.text-decoration-line-through]="t.status === 'completed'" [class.text-muted]="t.status === 'completed'">
+            {{t.title}} &rarr; <strong>{{getMemberName(t.assignedTo)}}</strong>
+          </span>
+          <span class="badge ms-2" [ngClass]="{'bg-success': t.status === 'completed', 'bg-warning text-dark': t.status === 'pending'}">
+            {{t.status === 'completed' ? 'Done' : 'Pending'}}
+          </span>
+        </div>
+        <div>
+          <button class="btn btn-sm" [ngClass]="{'btn-outline-success': t.status === 'pending', 'btn-outline-secondary': t.status === 'completed'}" (click)="toggleTaskStatus(t)">
+            {{t.status === 'completed' ? 'Undo' : 'Complete'}}
+          </button>
+          <button class="btn btn-sm btn-outline-danger ms-2" (click)="deleteTask(t.id)">Delete</button>
+        </div>
+      </li>
+      <li *ngIf="tasks.length === 0" class="list-group-item text-center text-muted">
+        No tasks yet. Create one above!
+      </li>
+    </ul>
+  </div>
+</div>

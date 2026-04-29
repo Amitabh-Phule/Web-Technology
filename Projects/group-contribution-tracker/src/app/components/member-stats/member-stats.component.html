@@ -1,0 +1,62 @@
+<div class="card shadow-sm mb-4">
+  <div class="card-header bg-primary text-white">
+    <h5 class="mb-0">Contribution Table</h5>
+  </div>
+  <div class="card-body p-0">
+    <table class="table table-hover mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>Member</th>
+          <th>Contribution</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of stats; trackBy: trackById">
+          <td style="width: 35%;">
+            <div *ngIf="editingMemberId !== s.member.id" class="d-flex justify-content-between align-items-center">
+              <span>{{s.member.name}}</span>
+              <button class="btn btn-sm text-primary py-0 px-2" style="font-size: 0.8rem;" (click)="startEdit(s.member.id, s.member.name)">Edit</button>
+            </div>
+            <div *ngIf="editingMemberId === s.member.id" class="input-group input-group-sm">
+              <input type="text" class="form-control" [(ngModel)]="editMemberName">
+              <button class="btn btn-success" (click)="saveEdit()">Save</button>
+              <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+            </div>
+          </td>
+          <td>
+            <div class="d-flex align-items-center">
+              <span class="me-2">{{s.contribution}}%</span>
+              <div class="progress flex-grow-1" style="height: 5px;">
+                <div class="progress-bar" role="progressbar" [style.width]="s.contribution + '%'" 
+                  [ngClass]="{'bg-success': s.status === 'Active', 'bg-warning': s.status === 'Moderate', 'bg-danger': s.status === 'Critical'}"></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span [ngClass]="{'text-success fw-bold': s.status === 'Active', 'text-warning fw-bold': s.status === 'Moderate', 'text-danger fw-bold': s.status === 'Critical'}">
+              {{s.status}}
+            </span>
+            <span *ngIf="s.warning" class="ms-1" title="Underperforming Member">⚠</span>
+          </td>
+        </tr>
+        <tr *ngIf="stats.length === 0">
+          <td colspan="3" class="text-center text-muted">No members in this project.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="p-3 bg-light border-top">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="New Member Name" [(ngModel)]="newMemberName">
+        <button class="btn btn-outline-primary" (click)="addMember()" [disabled]="!newMemberName">Add Member</button>
+      </div>
+
+      <ng-container *ngFor="let s of stats; trackBy: trackById">
+        <div *ngIf="s.warning" class="alert alert-danger py-2 mb-1 border-0 small">
+          ⚠ <strong>{{s.member.name}}</strong> is an Underperforming Member!
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="card shadow-sm mb-4">
+  <div class="card-header bg-primary text-white">
+    <h5 class="mb-0">Projects</h5>
+  </div>
+  <div class="card-body p-0">
+    <div class="list-group list-group-flush">
+      <button *ngFor="let p of projects" type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3" (click)="openProject(p.id)">
+        <div>
+          <h6 class="mb-1">{{p.name}}</h6>
+          <small class="text-muted">{{p.members.length}} Members | {{p.tasks.length}} Tasks</small>
+        </div>
+        <span class="badge bg-primary rounded-pill">Open &rarr;</span>
+      </button>
+      <div *ngIf="projects.length === 0" class="text-center text-muted py-4">
+        No projects available. Create one to get started.
+      </div>
+    </div>
+  </div>
+</div>
