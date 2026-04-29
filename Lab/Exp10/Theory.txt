@@ -1,0 +1,16 @@
+ReAct:- ReAct is a javascript library. Used to build user interfaces. It helps to use reusable components.
+
+jsx- javascript + xml
+    It allows writing html inside javascript.
+    ex. const ele = <h1>Hello Student</h2>
+
+fxnl components:- simple javascript fxns that return jsx
+    fx welcome(){
+        <h1>Hello</h1>
+    } 
+
+Activity:
+1.What is ReAct, Market Hype?
+2.What is jsx?
+3.What is fxnl components in ReAct?
+4.What is props?
