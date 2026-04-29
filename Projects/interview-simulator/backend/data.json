@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "category": "JavaScript",
+    "question": "What will be the output of the following code?",
+    "code": "function outer(){\n  let x=10;\n  return function(){\n    console.log(x);\n  }\n}\nouter()();",
+    "options": ["10", "undefined", "error", "null"],
+    "answer": 0
+  },
+  {
+    "id": 2,
+    "category": "React",
+    "question": "Which hook is used to perform side effects in a functional component?",
+    "options": ["useState", "useEffect", "useContext", "useReducer"],
+    "answer": 1
+  },
+  {
+    "id": 3,
+    "category": "JavaScript",
+    "question": "What is the result of `typeof null` in JavaScript?",
+    "options": ["null", "undefined", "object", "number"],
+    "answer": 2
+  },
+  {
+    "id": 4,
+    "category": "CSS",
+    "question": "Which CSS property controls the spacing between elements within a flex container?",
+    "options": ["margin", "padding", "gap", "space-between"],
+    "answer": 2
+  },
+  {
+    "id": 5,
+    "category": "Backend",
+    "question": "In Express.js, what is middleware?",
+    "code": "app.use((req, res, next) => {\n  console.log('Time:', Date.now());\n  next();\n});",
+    "options": [
+      "A database model",
+      "Functions that have access to the request, response, and next function",
+      "A built-in router",
+      "A template engine"
+    ],
+    "answer": 1
+  }
+]
