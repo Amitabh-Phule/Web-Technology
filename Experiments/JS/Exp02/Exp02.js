@@ -112,7 +112,7 @@ console.log("Missing number is: " + missingNumber);
 
 //write a code for reverse string
 
-  let str = "Swarupanand";
+  let str = "Spiderman";
   let reversed = " ";
 
   for (let i = str.length - 1; i >= 0; i--) {

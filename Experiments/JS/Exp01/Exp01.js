@@ -30,7 +30,7 @@ document.writeln("accId: " + accId + "<br>");
 console.log("Type of accId:", typeof accId);
 document.writeln("Type of accId: " + typeof accId + "<br>");
 
-let accName = "Aditya";
+let accName = "Amitabh";
 console.log("accName:", accName);
 document.writeln("accName: " + accName + "<br>");
 
@@ -75,7 +75,7 @@ document.writeln("Type of bigNumber: " + typeof bigNumber + "<br>");
 console.log("=== Activity 01 : Student Info ===");
 document.writeln("=== Activity 01 : Student Info ===<br>");
 
-let sname = "Aditya";
+let sname = "Amitabh";
 let sroll = 101;
 let sage = 20;
 let isBoy = true;

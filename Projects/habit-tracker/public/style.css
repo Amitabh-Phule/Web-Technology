@@ -1,0 +1,28 @@
+:root {
+    --mint: #10b981;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body { font-family: sans-serif; background: var(--bg); padding: 20px; color: #1e293b; }
+.dashboard { max-width: 1200px; margin: auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--bg); padding-bottom: 20px; }
+h1 span { color: var(--mint); }
+
+.action-bar { margin: 20px 0; display: flex; gap: 10px; }
+input { flex: 1; padding: 12px; border: 1px solid var(--border); border-radius: 8px; outline: none; }
+button { background: var(--mint); color: white; border: none; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+.matrix-container { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 11px; }
+th, td { border: 1px solid var(--border); padding: 10px; text-align: center; min-width: 30px; }
+
+.habit-col { text-align: left; font-weight: bold; min-width: 180px; position: sticky; left: 0; background: white; z-index: 5; border-right: 2px solid var(--border); }
+
+.cell { cursor: pointer; transition: 0.2s; }
+.status-1 { background-color: var(--mint); color: white; }
+.status-1::after { content: '✓'; }
+.status-0:hover { background-color: #ecfdf5; }
+
+.progress-box { background: var(--bg); padding: 10px 20px; border-radius: 8px; }

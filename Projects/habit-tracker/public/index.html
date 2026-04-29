@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Habit Matrix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>HABIT<span>TRACKER</span> PRO</h1>
+            <div id="overall-progress" class="progress-box"></div>
+        </header>
+
+        <div class="action-bar">
+            <input type="text" id="new-habit-name" placeholder="Enter habit name...">
+            <button onclick="createNewHabit()">+ Add Habit</button>
+        </div>
+
+        <div class="matrix-container">
+            <table>
+                <thead>
+                    <tr id="table-head">
+                        <th class="habit-col">Habit Goals</th>
+                        </tr>
+                </thead>
+                <tbody id="table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
-let arr = [{id:1 ,name: "Adi" , department:"Developer"} ,
-    {id:2 , name : "Sattu" , department : "Tester"},
-    { id : 3, name : "Pallu" , department : "Coder"},
-    { id : 4, name : "Sidd" , department : "designer"}
+let arr = [{id:1 ,name: "Amitabh" , department:"Developer"} ,
+    {id:2 , name : "Pratik" , department : "Tester"},
+    { id : 3, name : "Ritesh" , department : "Coder"},
+    { id : 4, name : "Mikey" , department : "designer"}
 ]
 
 for(i=0;i<arr.length;i++){
@@ -37,6 +37,6 @@ app.get('/users/:id',(req,res)=>{
     })
 })
 
-app.listen(port,()=>{
-    console.log("Port started at 4000");
+app.listen("3000",()=>{
+    console.log("Port started at 3000");
 })
