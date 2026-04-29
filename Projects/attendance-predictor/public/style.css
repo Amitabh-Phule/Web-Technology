@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    margin: 20px;
+}
+
+.container {
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+h1, h2, h3 {
+    color: #000;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0e0e0;
+}
+
+input, select, button {
+    font-family: Arial, sans-serif;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.status-safe {
+    color: green;
+    font-weight: bold;
+}
+
+.status-risk {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-critical {
+    color: red;
+    font-weight: bold;
+}
+
+.overall-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eaeaea;
+    border: 1px solid #000;
+}
