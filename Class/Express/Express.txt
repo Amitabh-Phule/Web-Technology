@@ -1,0 +1,81 @@
+#Express:
+=>Express is backend Technology
+=>It is minimal and flexible web application framework for node.js that simplifies the dev of web servers and API.
+
+#Features:
+-Routing
+-Middleware Support
+-Request & Response Handling
+-Rest API Creation
+-Template Rendering
+
+# NPM :Node Package Manager
+
+#Steps to install Express
+1)npm -v
+2)npm init
+3)npm install express
+4)CReate a file index.js
+5) Run node index.js
+
+
+
+====Activity01=====
+Diff b/w package.json vs package-Lock.json
+====Activity02===
+Diff b/w dev dependencies vs dependencies
+====Activity03====
+HTTP Requests
+
+// difference b/w package.json and package-lock.json
+// ->package.json is a file that contains the metadata of the project and the dependencies of the project. It is used to manage the dependencies of the project and to run scripts.
+// ->package-lock.json is a file that contains the exact version of the dependencies that are installed in the project. It is used to ensure that the same version of the dependencies are installed in every environment.
+
+//difference b/w dependency and devDependency
+// ->dependency is a package that is required for the project to run. It is used in the production environment.
+// ->devDependency is a package that is required for the development of the project. It is used in the development environment and is not included in the production environment.
+
+//http request methods
+// GET: used to retrieve data from the server.
+// POST: used to send data to the server.
+// PUT: used to update data on the server.
+// DELETE: used to delete data from the server.
+// PATCH: used to update a part of the data on the server.
+
+
+#Routing in Express.js
+=>It refers to determining how an appln response to client request for a specific URL and HTTP method
+
+'/' -> Represent home page
+
+======Activity04 : Department Project======
+department - home
+/cse
+/mech
+/ele
+
+
+#Components of Routing
+URL PAth
+HTTP Method
+Handler function 
+
+#Middleware in Express:
+=>These are functions that executes during the lifecycle of request before sending final response.
+=>They have access to request , response and next.
+
+#Middlewar flow :  
+client req -> Middleware -> route handler -> response
+
+
+==========Acitivity 01=============
+1.What is midddleware fun ? why we use?
+2.Where we use in company level?
+3.What are types of middleware?
+4.Write 2/3 examples of middleware.
+
+==========Acitivity 02=============
+1.write 2/4 examples of query parameter
+2.understand query parameter?
+3.why we use query parameter in real world
+
