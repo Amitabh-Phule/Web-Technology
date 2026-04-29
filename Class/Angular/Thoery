@@ -1,0 +1,59 @@
+Angular cli- command line interface
+ng serve = run command
+ng serve -o = open in browser automatically
+port is 4000
+
+package.json = config file info about your project
+package-lock.json = also config file bur detailed info
+angular.json = project .json file
+style.css = globally css style
+.gitignore = file execute to version control
+.editorconfig = vs code setting
+index.html = main html file load angular
+main.ts = entry file of app
+app.config.ts = app config file
+
+datatypes = premitive and non-premitive
+
+components is a UI block of structure 
+when we create component , component crete 4 files html=UI,css=Style,.ts=logic and spec.ts=unit testing file
+create component = ng genearte component compnent name
+
+two types of data binding = 1 way and 2 way
+3 types of data binding in 1-way:
+    interpolation: {{ value }}
+    property: [property] = "value"
+    event: (event) = "handler()"
+
+two-way: [(ngModel)] = "value"
+
+data binding = connect UI to code
+
+Directives Types:
+    structural:
+        for, if-else, switch case
+    attributes:
+        ng-style
+
+Directives means think of directive like magic wands that can change your web page without rewriting it.
+1.Structural: change structure of your page like add, remove and repeated things.
+2.Attributes: change look or style of page.
+
+Act: 1.Deep study about structural directive with ex(all loops)
+
+## Modules:
+    before angular 15 needs ng-Modules
+    nowdays were using angular 21 so Modules are optional. we can now use standalone component.
+
+## Services:
+    Services is like a helper class, it is use to store data or share logic that many component are used.
+    instead of writing same code in every component we write once in service
+    cmd:- ng g s[service_name] 
+    
+## Routing:
+    Navigation between one page to another.
+
+Activity:-
+1.Add student from validation
+2.Form list display
+3.Single page app
