@@ -1,0 +1,116 @@
+Activity no.1. Types of Components
+
+React has 2 main types:
+
+Functional Components (modern & recommended)
+Class Components (old)
+
+Components are reusable UI blocks
+
+Functional Component : 
+        function Hello() {
+        return <h1>Hello Student</h1>;
+        }
+        export default Hello;
+
+Class Component :
+        import React, { Component } from "react";
+
+        class Hello extends Component {
+        render() {
+            return <h1>Hello Student</h1>;
+        }
+        }
+        export default Hello;
+
+
+Activity no.2. Props Activity
+
+Props = data passed from parent → child
+Props are read-only (cannot change)
+
+function Student(props) {
+  return <h2>Name: {props.name}</h2>;
+}
+
+function App() {
+  return <Student name="Priya" />;
+}
+export default App;
+
+
+Activity no.3 State Concept
+
+State = data inside component (can change)
+Example 1: Counter
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <h2>{count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+    </>
+  );
+}
+export default Counter;
+
+
+Example 2: Input Field
+import { useState } from "react";
+
+function InputExample() {
+  const [name, setName] = useState("");
+
+  return (
+    <>
+      <input onChange={(e) => setName(e.target.value)} />
+      <h2>{name}</h2>
+    </>
+  );
+}
+export default InputExample;
+
+
+Activity no.4 Hooks Concept
+
+Hooks = functions that allow functional components to use state & features
+useState
+import { useState } from "react";
+
+function Example() {
+  const [num, setNum] = useState(0);
+
+  return <button onClick={() => setNum(num + 1)}>{num}</button>;
+}
+
+useEffect
+import { useEffect } from "react";
+
+function Example() {
+
+  useEffect(() => {
+    console.log("Component Loaded");
+  }, []);
+
+  return <h2>Check Console</h2>;
+}
+
+useRef
+import { useRef } from "react";
+
+function Example() {
+  const inputRef = useRef();
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>
+        Focus
+      </button>
+    </>
+  );
+}
+

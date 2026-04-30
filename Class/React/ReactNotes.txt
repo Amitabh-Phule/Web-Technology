@@ -1,0 +1,82 @@
+React ->
+    React is a js library developed by meta.
+    To build a fast and interactive user interfaces.
+    It is a single page application.
+    Page does not reload only content change (ex->insta, facebook)
+
+ why do we use react?
+    so problem with traditiona js-> 1>full page reload, 
+                                    2>complex DOM manipulation, 
+                                    3>hard to manage large application
+
+    sol -> update only required parts
+           use reusable components
+
+
+Virtual DOM - 
+    react creates copy of real DOM means virtual DOM.
+    when data changes react updates virtual DOM.
+    updates only change a part in real DOM -> used for high performance.
+
+How we can create project in react?
+    1. check if node.js is install - (node --v)
+    2. check if npm installed - (npm --v)
+    3. there are two ways to create react application
+        - npx create react-app app_name
+        - npm create vite@latest Student_App
+    4.framework - react
+    5.variant - javascript
+
+Vite - fast build tool
+npm install - install dependecy
+npm run dev - start server
+
+App.jsx - main file.
+
+JSX - javascript + XML .
+      it allows to us write html code inside the js.
+      const element = <h1> Hello react </h1>
+
+    rules -> 1.must return single parent.
+             2. use scope brackets({}) for js.
+
+components - heart of react
+            1. functional component -
+                    function student(){
+                        return <h1> this is fc </h1>
+                    }
+
+            use component -
+                    function App(){
+                        return <>
+                            <student/>
+                        </>            
+                    }
+
+main.jsx -> entry point of our react appication.
+
+Props(properties) - props means data passing from parent to child
+            function App() {
+               // return <>
+                    <student/>
+                </>  //
+
+                return<student fname = 'Priyanka'/>         
+            }
+
+            
+            function student(){
+                return <h2>Name : {props.fname}</h2>
+            } 
+
+    Activity 1 - what is diff bet angular and react?
+                 market hype?
+
+    Activity 2 - Why react created?
+
+    Activity 3 - what is component and types of component?
+                 where we use component in react? with two examples.
+
+    Activity 4 - what is props? why we use props ? types of props.with two examples.
+
+
